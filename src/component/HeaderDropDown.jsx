@@ -4,17 +4,18 @@ import boardIcon from "../assets/icon-board.svg";
 import darkIcon from "../assets/icon-dark-theme.svg";
 import lightIcon from "../assets/icon-light-theme.svg";
 import { setBoardActive } from "../redux/boardSlice";
-import { toggleDarkMode } from "../redux/themeSlice";
+import { selectIsDarkMode, toggleDarkMode } from "../redux/themeSlice";
 
 function HeaderDropDown({ setOpenDropdown, setIsBoardModalOpen }) {
   const dispatch = useDispatch();
-
+  const isDarkMode = useSelector(selectIsDarkMode);
   const handleDarkMode = () => {
     dispatch(toggleDarkMode());
   };
 
   const boards = useSelector((state) => state.boards);
-  const darkSide = true;
+
+
   return (
     <div
       className=" py-10 px-6 absolute  left-0 right-0 bottom-[-100vh] top-16 dropdown "
@@ -27,7 +28,7 @@ function HeaderDropDown({ setOpenDropdown, setIsBoardModalOpen }) {
     >
       {/* DropDown Modal */}
 
-      <div className=" bg-white dark:bg-[#2B3730] shadow-md shadow-[#367E6C1A]  w-full   py-4 rounded-xl">
+      <div className=" bg-white dark:bg-[#141615] shadow-md shadow-[#367E6C1A]  w-full   py-4 rounded-xl">
         <h3 className=" dark:text-gray-300 text-gray-600 font-semibold mx-4 mb-8 ">
           ALL BOARDS ({boards?.length})
         </h3>
@@ -66,13 +67,13 @@ function HeaderDropDown({ setOpenDropdown, setIsBoardModalOpen }) {
               // checked={darkSide}
               onClick={handleDarkMode}
               className={`${
-                !darkSide ? "bg-green-600" : "bg-gray-200"
+                isDarkMode ? "bg-green-600" : "bg-gray-200"
               } relative inline-flex h-6 w-11 items-center rounded-full`}
             >
               <span className="sr-only">Enable notifications</span>
               <span
                 className={`${
-                  !darkSide ? "translate-x-6" : "translate-x-1"
+                  isDarkMode ? "translate-x-6" : "translate-x-1"
                 } inline-block h-4 w-4 transform rounded-full bg-white transition`}
               />
             </button>

@@ -7,6 +7,7 @@ import { addBoard, editBoard } from "../../redux/boardSlice";
 function AddEditBoardModal({ setIsBoardModalOpen, type }) {
   const dispatch = useDispatch();
   const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [newColumns, setNewColumns] = useState([
     { name: "Todo", tasks: [], id: uuidv4() },
@@ -28,7 +29,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
   const validate = () => {
     setIsValid(false);
     if (!name.trim()) {
-      return false;
+      return setError("Name Must");
     }
     for (let i = 0; i < newColumns.length; i++) {
       if (!newColumns[i].name.trim()) {
@@ -39,7 +40,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
     return true;
   };
 
-  const onChange = (id, newValue) => {
+  const handleChange = (id, newValue) => {
     setNewColumns((prevState) => {
       const newState = [...prevState];
       const column = newState.find((col) => col.id === id);
@@ -48,11 +49,14 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
     });
   };
 
-  const onDelete = (id) => {
+  const handleDelete = (id) => {
     setNewColumns((prevState) => prevState.filter((el) => el.id !== id));
   };
 
-  const onSubmit = (type) => {
+  const handleSubmit = (type) => {
+    if (!name) {
+      console.log("name plz");
+    }
     setIsBoardModalOpen(false);
     if (type === "add") {
       dispatch(addBoard({ name, newColumns }));
@@ -89,7 +93,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
             id="board-name-input"
           />
         </div>
-
+        {error && <p className="text-red-500 mt-1 font-medium">{error}</p>}
         {/* Board Columns */}
 
         <div className="mt-8 flex flex-col space-y-3">
@@ -100,7 +104,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
               <input
                 className=" bg-transparent flex-grow px-4 py-2 rounded-md text-sm  border-[0.5px] border-gray-600 focus:outline-text-green-600 outline-[1px]  "
                 onChange={(e) => {
-                  onChange(column?.id, e.target.value);
+                  handleChange(column?.id, e.target.value);
                 }}
                 type="text"
                 value={column?.name}
@@ -108,7 +112,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
               <img
                 src={crossIcon}
                 onClick={() => {
-                  onDelete(column.id);
+                  handleDelete(column.id);
                 }}
                 className=" m-4 cursor-pointer "
               />
@@ -126,7 +130,7 @@ function AddEditBoardModal({ setIsBoardModalOpen, type }) {
             <button
               onClick={() => {
                 const isValid = validate();
-                if (isValid === true) onSubmit(type);
+                if (isValid === true) handleSubmit(type);
               }}
               className=" w-full items-center hover:opacity-70 dark:text-white dark:bg-green-600 mt-8 relative  text-white bg-green-600 py-2 rounded-full"
             >

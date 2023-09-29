@@ -55,13 +55,13 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   };
 
   return (
-    <div className="mr-4 p-4 fixed left-0 bg-white dark:bg-[#2B372E] z-50 right-0 ">
+    <div className=" p-4 fixed left-0 bg-white dark:bg-[#2b2c37] z-50 right-0 ">
       <header className=" flex justify-between dark:text-white items-center  ">
         {/* Left Side  */}
         <div className=" flex items-center space-x-2  md:space-x-4">
          <img src={Logo} alt="logo"  className="h-[32px] "/>
           <div className=" flex items-center ">
-            <h3 className=" truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-20 font-sans  ">
+            <h3 className=" truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-10 font-sans  ">
               {board?.name}
             </h3>
             <img

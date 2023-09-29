@@ -116,7 +116,7 @@ function AddEditTaskModal({
       {/* Modal Section */}
 
       <div
-        className=" scrollbar-hide overflow-y-scroll max-h-[95vh]  my-auto  bg-white dark:bg-[#2B372C] text-black dark:text-white font-bold
+        className=" scrollbar-hide overflow-y-scroll max-h-[95vh]  my-auto  bg-white dark:bg-[#0A0A0A] text-black dark:text-white font-bold
        shadow-md shadow-[#364e7e1a] max-w-md mx-auto  w-full px-8  py-8 rounded-xl"
       >
         <h3 className=" text-lg ">{type === "edit" ? "Edit" : "Add New"} Task</h3>
@@ -191,7 +191,7 @@ function AddEditTaskModal({
           <select
             value={status}
             onChange={onChangeStatus}
-            className=" select-status flex-grow px-4 py-2 rounded-md text-sm bg-transparent focus:border-0  border-[1px] border-gray-300 focus:outline-[#28A146] outline-none"
+            className=" dark:bg-slate-800 select-status flex-grow px-4 py-2 rounded-md text-sm bg-transparent focus:border-0  border-[1px] border-gray-300 focus:outline-[#28A146] outline-none"
           >
             {columns?.map((column, index) => (
               <option key={index}>{column?.name}</option>

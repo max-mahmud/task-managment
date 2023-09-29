@@ -23,7 +23,7 @@ function Task({ colIndex, taskIndex }) {
   };
 
   return (
-    <div>
+    <div className="">
       <div
         onClick={() => {
           setIsTaskModalOpen(true);

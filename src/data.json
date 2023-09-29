@@ -1,68 +1,83 @@
 {
   "boards": [
     {
-      "name": "Platform Launch",
-      "isActive" : false,
+      "name": "Hobby",
+      "isActive": true,
       "columns": [
         {
-          "name": "Todo",
+          "name": "To Do",
           "tasks": [
             {
-              "title": "Build UI for onboarding flow",
-              "description": "",
-              "status": "Todo",
+              "title": "Practice Drawing",
+              "description": "Improve sketching skills in spare time.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Sign up page",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Sign in page",
+                  "title": "Sketch a portrait",
                   "isCompleted": false
                 },
                 {
-                  "title": "Welcome page",
+                  "title": "Study perspective drawing",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Build UI for search",
-              "description": "",
-              "status": "Todo",
+              "title": "Read a Novel",
+              "description": "Enjoy reading fiction books.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Search page",
+                  "title": "Select a book to read",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Set reading goals",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Build settings UI",
-              "description": "",
-              "status": "Todo",
+              "title": "Learn Guitar",
+              "description": "Master playing the guitar.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Account page",
+                  "title": "Practice chords",
                   "isCompleted": false
                 },
                 {
-                  "title": "Billing page",
+                  "title": "Play a favorite song",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "QA and test all major user journeys",
-              "description": "Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.",
-              "status": "Todo",
+              "title": "Photography",
+              "description": "Capture stunning photographs.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Internal testing",
+                  "title": "Experiment with different lenses",
                   "isCompleted": false
                 },
                 {
-                  "title": "External testing",
+                  "title": "Take portraits of friends",
+                  "isCompleted": false
+                }
+              ]
+            },
+            {
+              "title": "Cooking",
+              "description": "Learn new recipes and culinary techniques.",
+              "status": "To Do",
+              "subtasks": [
+                {
+                  "title": "Try a new recipe each week",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Bake homemade bread",
                   "isCompleted": false
                 }
               ]
@@ -70,110 +85,49 @@
           ]
         },
         {
-          "name": "Doing",
+          "name": "In Progress",
           "tasks": [
             {
-              "title": "Design settings and search pages",
-              "description": "",
-              "status": "Doing",
+              "title": "Painting Project",
+              "description": "Create a landscape painting.",
+              "status": "In Progress",
               "subtasks": [
                 {
-                  "title": "Settings - Account page",
-                  "isCompleted": true
+                  "title": "Prepare canvas",
+                  "isCompleted": false
                 },
                 {
-                  "title": "Settings - Billing page",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Search page",
+                  "title": "Mix colors",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Add account management endpoints",
-              "description": "",
-              "status": "Doing",
+              "title": "Play Piano",
+              "description": "Learn to play piano melodies.",
+              "status": "In Progress",
               "subtasks": [
                 {
-                  "title": "Upgrade plan",
-                  "isCompleted": true
+                  "title": "Practice scales",
+                  "isCompleted": false
                 },
                 {
-                  "title": "Cancel plan",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Update payment method",
+                  "title": "Learn a new piece",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Design onboarding flow",
-              "description": "",
-              "status": "Doing",
+              "title": "Book Club Discussion",
+              "description": "Participate in a book club discussion.",
+              "status": "In Progress",
               "subtasks": [
                 {
-                  "title": "Sign up page",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Sign in page",
+                  "title": "Prepare discussion points",
                   "isCompleted": false
                 },
                 {
-                  "title": "Welcome page",
-                  "isCompleted": false
-                }
-              ]
-            },
-            {
-              "title": "Add search enpoints",
-              "description": "",
-              "status": "Doing",
-              "subtasks": [
-                {
-                  "title": "Add search endpoint",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Define search filters",
-                  "isCompleted": false
-                }
-              ]
-            },
-            {
-              "title": "Add authentication endpoints",
-              "description": "",
-              "status": "Doing",
-              "subtasks": [
-                {
-                  "title": "Define user model",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Add auth endpoints",
-                  "isCompleted": false
-                }
-              ]
-            },
-            {
-              "title": "Research pricing points of various competitors and trial different business models",
-              "description": "We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.",
-              "status": "Doing",
-              "subtasks": [
-                {
-                  "title": "Research competitor pricing and business models",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Outline a business model that works for our solution",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Talk to potential customers about our proposed solution and ask for fair price expectancy",
+                  "title": "Attend book club meeting",
                   "isCompleted": false
                 }
               ]
@@ -181,101 +135,49 @@
           ]
         },
         {
-          "name": "Done",
+          "name": "Completed",
           "tasks": [
             {
-              "title": "Conduct 5 wireframe tests",
-              "description": "Ensure the layout continues to make sense and we have strong buy-in from potential users.",
-              "status": "Done",
+              "title": "Sculpture Exhibition",
+              "description": "Organize a personal sculpture exhibition.",
+              "status": "Completed",
               "subtasks": [
                 {
-                  "title": "Complete 5 wireframe prototype tests",
-                  "isCompleted": true
-                }
-              ]
-            },
-            {
-              "title": "Create wireframe prototype",
-              "description": "Create a greyscale clickable wireframe prototype to test our asssumptions so far.",
-              "status": "Done",
-              "subtasks": [
-                {
-                  "title": "Create clickable wireframe prototype in Balsamiq",
-                  "isCompleted": true
-                }
-              ]
-            },
-            {
-              "title": "Review results of usability tests and iterate",
-              "description": "Keep iterating through the subtasks until we're clear on the core concepts for the app.",
-              "status": "Done",
-              "subtasks": [
-                {
-                  "title": "Meet to review notes from previous tests and plan changes",
+                  "title": "Create sculptures",
                   "isCompleted": true
                 },
                 {
-                  "title": "Make changes to paper prototypes",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Conduct 5 usability tests",
+                  "title": "Arrange exhibition space",
                   "isCompleted": true
                 }
               ]
             },
             {
-              "title": "Create paper prototypes and conduct 10 usability tests with potential customers",
-              "description": "",
-              "status": "Done",
+              "title": "Art Gallery Visit",
+              "description": "Explore local art exhibitions.",
+              "status": "Completed",
               "subtasks": [
                 {
-                  "title": "Create paper prototypes for version one",
+                  "title": "Attend gallery opening",
                   "isCompleted": true
                 },
                 {
-                  "title": "Complete 10 usability tests",
+                  "title": "Appreciate diverse artworks",
                   "isCompleted": true
                 }
               ]
             },
             {
-              "title": "Market discovery",
-              "description": "We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.",
-              "status": "Done",
+              "title": "Learn Calligraphy",
+              "description": "Master the art of calligraphy.",
+              "status": "Completed",
               "subtasks": [
                 {
-                  "title": "Interview 10 prospective customers",
-                  "isCompleted": true
-                }
-              ]
-            },
-            {
-              "title": "Competitor analysis",
-              "description": "",
-              "status": "Done",
-              "subtasks": [
-                {
-                  "title": "Find direct and indirect competitors",
+                  "title": "Practice different scripts",
                   "isCompleted": true
                 },
                 {
-                  "title": "SWOT analysis for each competitor",
-                  "isCompleted": true
-                }
-              ]
-            },
-            {
-              "title": "Research the market",
-              "description": "We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.",
-              "status": "Done",
-              "subtasks": [
-                {
-                  "title": "Write up research analysis",
-                  "isCompleted": true
-                },
-                {
-                  "title": "Calculate TAM",
+                  "title": "Create calligraphic artwork",
                   "isCompleted": true
                 }
               ]
@@ -285,81 +187,38 @@
       ]
     },
     {
-      "name": "Marketing Plan",
-      "isActive" : false,
+      "name": "Cricket",
+      "isActive": true,
       "columns": [
         {
-          "name": "Todo",
+          "name": "To Do",
           "tasks": [
             {
-              "title": "Plan Product Hunt launch",
-              "description": "",
-              "status": "Todo",
+              "title": "Batting Practice",
+              "description": "Improve cricket batting skills.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Find hunter",
+                  "title": "Work on cover drives",
                   "isCompleted": false
                 },
                 {
-                  "title": "Gather assets",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Draft product page",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Notify customers",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Notify network",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Launch!",
+                  "title": "Practice pull shots",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Share on Show HN",
-              "description": "",
-              "status": "",
+              "title": "Bowling Drills",
+              "description": "Enhance cricket bowling techniques.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Draft out HN post",
+                  "title": "Master yorker deliveries",
                   "isCompleted": false
                 },
                 {
-                  "title": "Get feedback and refine",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Publish post",
-                  "isCompleted": false
-                }
-              ]
-            },
-            {
-              "title": "Write launch article to publish on multiple channels",
-              "description": "",
-              "status": "",
-              "subtasks": [
-                {
-                  "title": "Write article",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Publish on LinkedIn",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Publish on Inndie Hackers",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Publish on Medium",
+                  "title": "Develop spin variations",
                   "isCompleted": false
                 }
               ]
@@ -367,52 +226,80 @@
           ]
         },
         {
-          "name": "Doing",
-          "tasks": []
+          "name": "In Progress",
+          "tasks": [
+            {
+              "title": "Fielding Practice",
+              "description": "Improve cricket fielding skills.",
+              "status": "In Progress",
+              "subtasks": [
+                {
+                  "title": "Practice catching drills",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Work on ground fielding",
+                  "isCompleted": false
+                }
+              ]
+            }
+          ]
         },
         {
-          "name": "Done",
-          "tasks": []
+          "name": "Completed",
+          "tasks": [
+            {
+              "title": "Cricket Matches",
+              "description": "Participate in local cricket matches.",
+              "status": "Completed",
+              "subtasks": [
+                {
+                  "title": "Score a century",
+                  "isCompleted": true
+                },
+                {
+                  "title": "Take a five-wicket haul",
+                  "isCompleted": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "name": "Roadmap",
-      "isActive" : false,
+      "name": "Profession",
+      "isActive": true,
       "columns": [
         {
-          "name": "Now",
+          "name": "To Do",
           "tasks": [
             {
-              "title": "Launch version one",
-              "description": "",
-              "status": "",
+              "title": "Project Management",
+              "description": "Manage client projects effectively.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Launch privately to our waitlist",
+                  "title": "Create project timelines",
                   "isCompleted": false
                 },
                 {
-                  "title": "Launch publicly on PH, HN, etc.",
+                  "title": "Assign tasks to team members",
                   "isCompleted": false
                 }
               ]
             },
             {
-              "title": "Review early feedback and plan next steps for roadmap",
-              "description": "Beyond the initial launch, we're keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.",
-              "status": "",
+              "title": "Client Meetings",
+              "description": "Schedule and prepare for client meetings.",
+              "status": "To Do",
               "subtasks": [
                 {
-                  "title": "Interview 10 customers",
+                  "title": "Set meeting agendas",
                   "isCompleted": false
                 },
                 {
-                  "title": "Review common customer pain points and suggestions",
-                  "isCompleted": false
-                },
-                {
-                  "title": "Outline next steps for our roadmap",
+                  "title": "Review project progress",
                   "isCompleted": false
                 }
               ]
@@ -420,12 +307,125 @@
           ]
         },
         {
-          "name": "Next",
-          "tasks": []
+          "name": "In Progress",
+          "tasks": [
+            {
+              "title": "Market Research",
+              "description": "Analyze market trends and competition.",
+              "status": "In Progress",
+              "subtasks": [
+                {
+                  "title": "Collect market data",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Identify potential opportunities",
+                  "isCompleted": false
+                }
+              ]
+            }
+          ]
         },
         {
-          "name": "Later",
-          "tasks": []
+          "name": "Completed",
+          "tasks": [
+            {
+              "title": "Client Deliverables",
+              "description": "Successfully deliver client projects.",
+              "status": "Completed",
+              "subtasks": [
+                {
+                  "title": "Submit project reports",
+                  "isCompleted": true
+                },
+                {
+                  "title": "Receive client feedback",
+                  "isCompleted": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Football",
+      "isActive": true,
+      "columns": [
+        {
+          "name": "To Do",
+          "tasks": [
+            {
+              "title": "Football Training",
+              "description": "Enhance football skills and fitness.",
+              "status": "To Do",
+              "subtasks": [
+                {
+                  "title": "Practice dribbling",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Improve passing accuracy",
+                  "isCompleted": false
+                }
+              ]
+            },
+            {
+              "title": "Football Matches",
+              "description": "Participate in local football matches.",
+              "status": "To Do",
+              "subtasks": [
+                {
+                  "title": "Score a goal in a match",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Win a tournament",
+                  "isCompleted": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "In Progress",
+          "tasks": [
+            {
+              "title": "Team Practices",
+              "description": "Attend team training sessions.",
+              "status": "In Progress",
+              "subtasks": [
+                {
+                  "title": "Learn set-piece strategies",
+                  "isCompleted": false
+                },
+                {
+                  "title": "Improve defensive skills",
+                  "isCompleted": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Completed",
+          "tasks": [
+            {
+              "title": "Football Coaching",
+              "description": "Provide coaching to youth football players.",
+              "status": "Completed",
+              "subtasks": [
+                {
+                  "title": "Develop training plans",
+                  "isCompleted": true
+                },
+                {
+                  "title": "Conduct coaching sessions",
+                  "isCompleted": true
+                }
+              ]
+            }
+          ]
         }
       ]
     }

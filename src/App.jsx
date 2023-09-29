@@ -26,7 +26,7 @@ const App = () => {
   }, [isDarkMode]);
 
   return (
-    <div className=" overflow-hidden  overflow-x-scroll">
+    <div className=" overflow-hidden  overflow-x-auto">
       <>
         {boards.length > 0 ? (
           <>

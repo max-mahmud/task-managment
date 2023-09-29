@@ -4,7 +4,7 @@ import AddEditBoardModal from "./Modal/AddEditBoardModal";
 function EmptyBoard({ type }) {
   const [isBoardModalOpen, setIsBoardModalOpen] = useState(false);
   return (
-    <div className=" bg-white dark:bg-[#2B3732] h-screen w-screen flex flex-col  items-center justify-center">
+    <div className=" bg-white dark:bg-[#19201D] h-screen w-screen flex flex-col  items-center justify-center">
       <h3 className=" text-gray-500 font-bold">
         {type === "edit"
           ? "This board is empty. Create a new column to get started."

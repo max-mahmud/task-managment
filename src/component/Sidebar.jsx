@@ -24,15 +24,14 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
     setIsSideBarOpen((curr) => !curr);
   };
 
-  const darkSide = true;
 
   return (
     <div>
       <div
         className={
           isSideBarOpen
-            ? `min-w-[261px] bg-white dark:bg-[#2b2c37]  fixed top-[72px] h-screen  items-center left-0 z-20`
-            : ` bg-green-600 dark:bg-[#2b2c37] dark:hover:bg-green-600 top-auto bottom-10 justify-center items-center hover:opacity-80 cursor-pointer  p-0 transition duration-300 transform fixed felx w-[56px] h-[48px] rounded-r-full  `
+            ? `min-w-[261px] bg-white dark:bg-[#1A1B20]  fixed top-[72px] h-screen  items-center left-0 z-20`
+            : ` bg-green-600 dark:bg-[#191A20] dark:hover:bg-green-600 top-auto bottom-10 justify-center items-center hover:opacity-80 cursor-pointer  p-0 transition duration-300 transform fixed felx w-[56px] h-[48px] rounded-r-full  `
         }
       >
         <div>
@@ -48,7 +47,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                 <div>
                   {boards.map((board, index) => (
                     <div
-                      className={` flex items-baseline space-x-2 px-5 mr-8 rounded-r-full duration-500 ease-in-out py-4 cursor-pointer hover:bg-[#2B703A1A] hover:text-greenbg-green-600 dark:hover:bg-white dark:hover:text-greenbg-green-600 dark:text-white  ${
+                      className={` flex items-baseline space-x-2 px-5 mr-8 rounded-r-full duration-500 ease-in-out py-4 cursor-pointer hover:bg-[#12161238] hover:text-green-600 dark:hover:bg-white dark:hover:text-green-600 dark:text-white  ${
                         board.isActive && " bg-green-600 rounded-r-full text-white mr-8 "
                       } `}
                       key={index}
@@ -62,7 +61,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                   ))}
 
                   <div
-                    className=" flex  items-baseline space-x-2  mr-8 rounded-r-full duration-500 ease-in-out cursor-pointer text-greenbg-green-600 px-5 py-4 hover:bg-[#635fc71a] hover:text-greenbg-green-600 dark:hover:bg-white  "
+                    className=" flex  items-baseline space-x-2  mr-8 rounded-r-full duration-500 ease-in-out cursor-pointer text-greenbg-green-600 px-5 py-4 hover:bg-[#19251E1A] hover:text-green-600 dark:hover:bg-white dark:hover:text-green-600 dark:text-yellow-50 "
                     onClick={() => {
                       setIsBoardModalOpen(true);
                     }}
