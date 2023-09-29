@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { setBoardActive } from "./redux/boardSlice";
 import EmptyBoard from "./component/EmptyBoard";
-import { selectIsDarkMode, toggleDarkMode } from "./redux/themeSlice";
+import { selectIsDarkMode } from "./redux/themeSlice";
 import Home from "./component/Home";
 
 const App = () => {

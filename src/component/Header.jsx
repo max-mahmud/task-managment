@@ -4,6 +4,8 @@ import HeaderDropDown from "./HeaderDropDown";
 import Logo from "../assets/icons8-a-67.png";
 import iconDown from "../assets/icon-chevron-down.svg";
 import iconUp from "../assets/icon-chevron-up.svg";
+import darkIcon from "../assets/icon-dark-theme.svg";
+import lightIcon from "../assets/icon-light-theme.svg";
 import elipsis from "../assets/icon-vertical-ellipsis.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteBoard, setBoardActive } from "../redux/boardSlice";
@@ -11,6 +13,7 @@ import ElipsisMenu from "./ElipsisMenu";
 import AddEditTaskModal from "./Modal/AddEditTaskModal";
 import AddEditBoardModal from "./Modal/AddEditBoardModal";
 import DeleteModal from "./Modal/DeleteModel";
+import { selectIsDarkMode, toggleDarkMode } from "../redux/themeSlice";
 
 const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -24,6 +27,11 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   const boards = useSelector((state) => state.boards);
 
   const board = boards.find((board) => board.isActive);
+
+  const isDarkMode = useSelector(selectIsDarkMode);
+  const handleDarkMode = () => {
+    dispatch(toggleDarkMode());
+  };
 
   useEffect(() => {
     dispatch(setBoardActive({ index: 0 }));
@@ -59,7 +67,7 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
       <header className=" flex justify-between dark:text-white items-center  ">
         {/* Left Side  */}
         <div className=" flex items-center space-x-2  md:space-x-4">
-         <img src={Logo} alt="logo"  className="h-[32px] "/>
+          <img src={Logo} alt="logo" className="h-[32px] " />
           <div className=" flex items-center ">
             <h3 className=" truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-10 font-sans  ">
               {board?.name}
@@ -71,6 +79,28 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
               onClick={onDropdownClick}
             />
           </div>
+        </div>
+
+        {/* DarkMode in big screen */}
+
+        <div className="hidden mx-2 py-2 px-4 relative space-x-2 bg-slate-200 dark:bg-[#171B17] md:flex justify-center items-center rounded-lg">
+          <img src={lightIcon} alt="sun indicating light mode" />
+
+          <button
+            // checked={darkSide}
+            onClick={handleDarkMode}
+            className={`${
+              isDarkMode ? "bg-green-600" : "bg-gray-300"
+            } relative inline-flex h-6 w-11 items-center rounded-full`}
+          >
+            <span
+              className={`${
+                isDarkMode ? "translate-x-6" : "translate-x-1"
+              } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+            />
+          </button>
+          <div className="icons8-a"></div>
+          <img src={darkIcon} alt="moon indicating dark mode" />
         </div>
 
         {/* Right Side */}

@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import boardIcon from "../assets/icon-board.svg";
-import darkIcon from "../assets/icon-dark-theme.svg";
-import lightIcon from "../assets/icon-light-theme.svg";
+
 
 import showSidebarIcon from "../assets/icon-show-sidebar.svg";
 import hideSidebarIcon from "../assets/icon-hide-sidebar.svg";
 import { setBoardActive } from "../redux/boardSlice";
 import AddEditBoardModal from "./Modal/AddEditBoardModal";
-import { selectIsDarkMode, toggleDarkMode } from "../redux/themeSlice";
 
 function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
   const dispatch = useDispatch();
   const [isBoardModalOpen, setIsBoardModalOpen] = useState(false);
-  const isDarkMode = useSelector(selectIsDarkMode);
-  const handleDarkMode = () => {
-    dispatch(toggleDarkMode());
-  };
+
 
   const boards = useSelector((state) => state.boards);
 
@@ -71,25 +66,6 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                   </div>
                 </div>
 
-                <div className=" mx-2  p-4 relative space-x-2 bg-slate-200 dark:bg-[#171B17] flex justify-center items-center rounded-lg">
-                  <img src={lightIcon} alt="sun indicating light mode" />
-
-                  <button
-                    // checked={darkSide}
-                    onClick={handleDarkMode}
-                    className={`${
-                      isDarkMode ? "bg-green-600" : "bg-gray-300"
-                    } relative inline-flex h-6 w-11 items-center rounded-full`}
-                  >
-                    <span
-                      className={`${
-                        isDarkMode ? "translate-x-6" : "translate-x-1"
-                      } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-                    />
-                  </button>
-                  <div className="icons8-a"></div>
-                  <img src={darkIcon} alt="moon indicating dark mode" />
-                </div>
               </div>
             </div>
           )}
