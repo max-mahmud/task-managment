@@ -9,11 +9,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteBoard, setBoardActive } from "../redux/boardSlice";
 import ElipsisMenu from "./ElipsisMenu";
 import AddEditTaskModal from "./Modal/AddEditTaskModal";
+import AddEditBoardModal from "./Modal/AddEditBoardModal";
+import DeleteModal from "./Modal/DeleteModel";
 
 const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [isElipsisMenuOpen, setIsElipsisMenuOpen] = useState(false);
   const [boardType, setBoardType] = useState("add");
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
 
   const dispatch = useDispatch();
@@ -116,6 +119,22 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
       </header>
       {isTaskModalOpen && (
         <AddEditTaskModal setIsAddTaskModalOpen={setIsTaskModalOpen} type="add" device="mobile" />
+      )}
+
+      {isBoardModalOpen && (
+        <AddEditBoardModal
+          setBoardType={setBoardType}
+          type={boardType}
+          setIsBoardModalOpen={setIsBoardModalOpen}
+        />
+      )}
+      {isDeleteModalOpen && (
+        <DeleteModal
+          setIsDeleteModalOpen={setIsDeleteModalOpen}
+          type="board"
+          title={board?.name}
+          onDeleteBtnClick={onDeleteBtnClick}
+        />
       )}
     </div>
   );
