@@ -7,3 +7,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+@layer components {
+  .button {
+    @apply bg-green-600 py-2 px-4 rounded-full text-white text-lg font-semibold hover:opacity-80 duration-200
+  }
+}
+
+.dropdown{
+  background-color: #0925133a;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(96%) saturate(16%) hue-rotate(350deg)
+    brightness(104%) contrast(100%);
+}
+
+.select-status{
+  background-image: url("./assets/icon-chevron-down.svg");
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+}
