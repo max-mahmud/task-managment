@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import HeaderDropDown from "./HeaderDropDown";
-import Logo from "../assets/logo-mobile.svg";
+import Logo from "../assets/icons8-a-67.png";
 import iconDown from "../assets/icon-chevron-down.svg";
 import iconUp from "../assets/icon-chevron-up.svg";
 import elipsis from "../assets/icon-vertical-ellipsis.svg";
@@ -55,12 +55,11 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   };
 
   return (
-    <div className="mr-4 p-4 fixed left-0 bg-white dark:bg-[#2b2c37] z-50 right-0 ">
+    <div className="mr-4 p-4 fixed left-0 bg-white dark:bg-[#2B372E] z-50 right-0 ">
       <header className=" flex justify-between dark:text-white items-center  ">
         {/* Left Side  */}
         <div className=" flex items-center space-x-2  md:space-x-4">
-          <h4>Logo</h4>
-          <h3 className=" md:text-4xl  hidden md:inline-block font-bold  font-sans">Name</h3>
+         <img src={Logo} alt="logo"  className="h-[32px] "/>
           <div className=" flex items-center ">
             <h3 className=" truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-20 font-sans  ">
               {board?.name}

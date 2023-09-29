@@ -58,7 +58,7 @@ const boardSlice = createSlice({
       const board = state.find((board) => board.isActive);
       const prevCol = board.columns.find((col, i) => i === prevColIndex);
       const task = prevCol.tasks.splice(taskIndex, 1)[0];
-      board.columns.find((col, i) => i === colIndex).tasks.push(task);
+      board.columns.find((col, i) => i === colIndex).tasks.unshift(task);
     },
     setSubtaskCompleted: (state, action) => {
       const payload = action.payload;
