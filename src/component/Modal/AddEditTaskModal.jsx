@@ -119,7 +119,15 @@ function AddEditTaskModal({
         className=" scrollbar-hide overflow-y-scroll max-h-[95vh]  my-auto  bg-white dark:bg-[#0A0A0A] text-black dark:text-white font-bold
        shadow-md shadow-[#364e7e1a] max-w-md mx-auto  w-full px-8  py-8 rounded-xl"
       >
-        <h3 className=" text-lg ">{type === "edit" ? "Edit" : "Add New"} Task</h3>
+        <div className="flex justify-between">
+          <h3 className=" text-lg ">{type === "edit" ? "Edit" : "Add New"} Task</h3>
+          <img
+            src={crossIcon}
+            alt="cross"
+            onClick={() => setIsAddTaskModalOpen(false)}
+            className="w-[20px] cursor-pointer h-5"
+          />
+        </div>
 
         {/* Task Name */}
 

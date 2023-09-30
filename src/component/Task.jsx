@@ -30,7 +30,7 @@ function Task({ colIndex, taskIndex }) {
         }}
         draggable
         onDragStart={handleOnDrag}
-        className=" w-[280px] first:my-5 rounded-lg  bg-white  dark:bg-[#121312] shadow-[#163F2B1A] py-6 px-3 shadow-lg hover:text-green-600 dark:text-white dark:hover:text-green-600 cursor-pointer "
+        className=" w-[280px] first:my-5 rounded-lg dark:shadow-[#1c1c1c] bg-white  dark:bg-[#121312] shadow-[#163F2B1A] py-6 px-3 shadow-lg hover:text-green-600 dark:text-white dark:hover:text-green-600 cursor-pointer "
       >
         <p className=" font-bold tracking-wide ">{task.title}</p>
         <p className=" font-bold text-xs tracking-tighter mt-2 text-gray-500">

@@ -63,7 +63,7 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
   };
 
   return (
-    <div className=" p-4 fixed left-0 bg-white dark:bg-[#2b2c37] z-50 right-0 ">
+    <div className=" p-4 fixed shadow left-0 bg-white dark:bg-[#2b2c37] z-50 right-0 ">
       <header className=" flex justify-between dark:text-white items-center  ">
         {/* Left Side  */}
         <div className=" flex items-center space-x-2  md:space-x-4">
@@ -131,7 +131,7 @@ const Header = ({ setIsBoardModalOpen, isBoardModalOpen }) => {
             }}
             src={elipsis}
             alt="elipsis"
-            className=" cursor-pointer h-6"
+            className=" cursor-pointer h-6 pr-4"
           />
           {isElipsisMenuOpen && (
             <ElipsisMenu

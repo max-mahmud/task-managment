@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import boardIcon from "../assets/icon-board.svg";
 
-
 import showSidebarIcon from "../assets/icon-show-sidebar.svg";
 import hideSidebarIcon from "../assets/icon-hide-sidebar.svg";
 import { setBoardActive } from "../redux/boardSlice";
@@ -12,13 +11,11 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
   const dispatch = useDispatch();
   const [isBoardModalOpen, setIsBoardModalOpen] = useState(false);
 
-
   const boards = useSelector((state) => state.boards);
 
   const toggleSidebar = () => {
     setIsSideBarOpen((curr) => !curr);
   };
-
 
   return (
     <div>
@@ -65,7 +62,6 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                     <p className=" text-lg font-bold  ">Create New Board </p>
                   </div>
                 </div>
-
               </div>
             </div>
           )}
@@ -80,7 +76,10 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
               {isSideBarOpen && <p> Hide Sidebar </p>}
             </div>
           ) : (
-            <div className=" absolute p-5  " onClick={() => toggleSidebar()}>
+            <div
+              className=" absolute p-5  dark:bg-green-500 dark:rounded-r-full"
+              onClick={() => toggleSidebar()}
+            >
               <img src={showSidebarIcon} alt="showSidebarIcon" />
             </div>
           )}
